@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+<main>
+    <div class="container mt-5 mb-5">
+        <div class="circle"></div>
+        <div class="register-form-container">
+            <h1 class="form-title">
+                Регистрация
+            </h1>
+            <form action="/registration" method="post">
+                <input type="text" name="name" placeholder="имя" class="form-field"><br>
+                <input type="text" name="email" placeholder="почта" class="form-field"><br>
+                <input type="text" name="password" placeholder="пароль" class="form-field"><br>
+                <button type="submit" class="btn btn-success">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

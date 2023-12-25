@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Здравствуйте, <span th:text="${name}"/>!</h2>
+    <h4>Выберите врача и время записи на приём</h4>
+    <form method="post">
+        <select type="text" name="doctorName">
+            <div th:each="doctor : ${doctorList}" class="alert alert-info mt-2">
+                <option th:value="${doctor.name}" th:text="${doctor.name} + '-' + ${doctor.specialization}"></option>
+            </div>
+        </select><br>
+        <input type="text" name="date" placeholder="время" class="form-field"><br>
+        <button type="submit" class="btn btn-success">Записаться</button>
+    </form>
+</div>
+</body>
+</html>
